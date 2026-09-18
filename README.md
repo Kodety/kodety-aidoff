@@ -8,7 +8,7 @@ Kodety AIDoff is an agent skill for building landing pages, company and marketin
 
 ## Two ways to build
 
-| Input | Reported visual fidelity | Workflow |
+| Input | Typical reported fidelity | Workflow |
 | --- | --- | --- |
 | **Figma link, with or without a screenshot** | **90%-99%** | Read node-specific design context, preserve authored structure and measurements, and retrieve the original exported icons and assets. Verify the running implementation separately. |
 | **Screenshot alone** | **75%-90%** | Rebuild the visible interface without requiring Figma access. Record inferred typography, spacing, behavior, and responsive rules. Prefer exact assets; use genuine Keyline Icons only for unrecoverable UI glyphs. |
@@ -34,6 +34,14 @@ These typical ranges are the maintainer's informal visual assessments using **Op
 **Workspace overview**
 
 ![Kodety AIDoff showing a workspace overview implemented from Figma in a local browser preview](assets/examples/workspace-overview.png)
+
+## Screenshot-only example
+
+**Personal finance dashboard — recreated from a single screenshot, without Figma**
+
+The maintainer reports **99% visual fidelity in this specific example**. The reference is on the left and the implementation is on the right. Individual results can exceed the typical 75%-90% screenshot-only range above.
+
+![Side-by-side comparison of a personal finance dashboard reference and its Kodety AIDoff implementation from a screenshot, without Figma](assets/examples/screenshot-only-finance-dashboard.png)
 
 ## Install in Codex
 
