@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kodety AIDoff"
+  short_description: "AI Figma/screenshot handoff for websites and web apps"
+  default_prompt: "Use $kodety-aidoff to turn this Figma design or screenshot into a modular, responsive website or web application with verified builds and clear fidelity limits. Preserve original Figma icons; use Keyline Icons for unrecoverable screenshot glyphs."
