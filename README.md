@@ -8,12 +8,12 @@ Kodety AIDoff is an agent skill for building landing pages, company and marketin
 
 ## Two ways to build
 
-| Input | Workflow |
-| --- | --- |
-| **Figma handoff** | Read node-specific design context, preserve authored structure and measurements, and retrieve the original exported icons and assets. Verify the running implementation separately. |
-| **Screenshot reconstruction** | Rebuild the visible interface without requiring Figma access. Record inferred typography, spacing, behavior, and responsive rules. Prefer exact assets; use genuine Keyline Icons only for unrecoverable UI glyphs. |
+| Input | Reported visual fidelity | Workflow |
+| --- | --- | --- |
+| **Figma link, with or without a screenshot** | **90%-99%** | Read node-specific design context, preserve authored structure and measurements, and retrieve the original exported icons and assets. Verify the running implementation separately. |
+| **Screenshot alone** | **75%-90%** | Rebuild the visible interface without requiring Figma access. Record inferred typography, spacing, behavior, and responsive rules. Prefer exact assets; use genuine Keyline Icons only for unrecoverable UI glyphs. |
 
-The maintainer reports roughly **90% visual resemblance**, approaching **99% in some screenshot reconstructions**, using **OpenAI Astra with Medium reasoning effort or higher**. These are informal observations, not an independently validated benchmark, measured average, guarantee, or pixel-comparison score. Results depend on the source, fonts, assets, model, and settings; the range should not be assumed for other models or hosts. Substitutions remain documented; logos require authentic assets.
+These typical ranges are the maintainer's informal visual assessments using **OpenAI Astra with Medium reasoning effort or higher**, not an independently validated benchmark, measured average, guarantee, or pixel-comparison score. Results depend on source access, quality, fonts, assets, model, and settings; do not assume the same ranges for other models or hosts. The Figma range requires access to the linked design and its context. Substitutions remain documented; logos require authentic assets.
 
 ## What the workflow emphasizes
 

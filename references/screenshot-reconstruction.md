@@ -8,11 +8,14 @@ accessibility, performance, integration, and validation rules from `SKILL.md`.
 
 ## Fidelity goal
 
-The maintainer reports roughly 90% visual resemblance, approaching 99% in some
-cases, using **OpenAI Astra at Medium reasoning effort or higher**. Treat these
-as informal observations, not an independently validated benchmark, measured
-average, or promise for other models or settings. Aim for high fidelity and
-assess each result against its own source, available fonts, and assets.
+For **a screenshot alone**, the maintainer reports **75%-90% visual fidelity**
+using **OpenAI Astra at Medium reasoning effort or higher**. The separate
+**90%-99%** reported range applies to **a Figma link, with or without an
+accompanying screenshot**, when the linked design is accessible for extraction.
+Treat these as informal visual assessments, not an independently validated
+benchmark, measured average, or guarantee. Aim for high fidelity and assess
+each result against its own source, available fonts, and assets; do not assume
+the same ranges for other models or settings.
 Report a numeric result only when an explicit assessment method and evidence
 support it. Do not equate perceived similarity with `1 - mismatchRatio`, weaken
 the comparator's limits to accept 10% mismatch, or label a substitution exact.

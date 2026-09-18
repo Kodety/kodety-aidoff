@@ -335,9 +335,10 @@ validation; the zero hash is not a valid claim about a source file.
   captures must match `viewport × DPR`. Full-page and selector captures must
   represent the same supplied region. Unknown original DPR stays an assumption.
 - Inferred targets remain `unverified` and carry an `unverifiedReason`, even
-  when their functionality passes. The maintainer's 90% to near-99% resemblance
-  reports with OpenAI Astra at Medium or higher never override statuses,
-  thresholds, or recorded substitutions.
+  when their functionality passes. The maintainer's reported visual fidelity
+  ranges with OpenAI Astra at Medium or higher (75%-90% from a screenshot alone;
+  90%-99% from an accessible Figma link, with or without a screenshot) never
+  override statuses, thresholds, or recorded substitutions.
 - For mixed Figma and screenshot tasks, use a separate map per mode and run
   the validator with `--map` and `--require-map` on each. Unknown source modes
   are invalid; keep one mode's rules from weakening the other.

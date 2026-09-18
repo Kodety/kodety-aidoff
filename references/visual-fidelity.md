@@ -126,14 +126,14 @@ Masks/exceptions must be bounded to genuinely dynamic content and include a
 reason. Never mask navigation, typography, primary layout, or a whole chart
 simply because matching it is difficult.
 
-For screenshot reconstruction, the maintainer's roughly 90% to near-99%
-resemblance reports refer to **OpenAI Astra at Medium reasoning effort or
-higher**. These are informal observations, not an independently validated
-benchmark, measured average, guarantee, or pixel-match score; do not assume the
-same range for other models or settings. Never relax automated mismatch
-ceilings to meet those labels. A reviewed approximation can pass manual review
-with listed deviations; it cannot receive `verified` while nonexact icons,
-fonts, or media remain.
+The maintainer reports **75%-90% visual fidelity from a screenshot alone** and
+**90%-99% from an accessible Figma link, with or without a screenshot**, using
+**OpenAI Astra at Medium reasoning effort or higher**. These are informal
+visual assessments, not an independently validated benchmark, measured average,
+guarantee, or pixel-match score; do not assume the same ranges for other models
+or settings. Never relax automated mismatch ceilings to meet those labels.
+A reviewed approximation can pass manual review with listed deviations; it
+cannot receive `verified` while nonexact icons, fonts, or media remain.
 
 ## 6. Responsive coverage
 

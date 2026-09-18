@@ -1,6 +1,6 @@
 ---
 name: kodety-aidoff
-description: "AI Figma-to-code handoff and screenshot reconstruction for websites and apps. Maintainer-reported screenshot fidelity: ~90-99% with OpenAI Astra at Medium or higher; results vary."
+description: "Build websites and apps from Figma or screenshots. Reported fidelity with OpenAI Astra, Medium or higher: screenshot alone 75-90%; Figma link with or without a screenshot 90-99%. Results vary."
 license: CC-BY-SA-4.0
 ---
 
@@ -24,15 +24,23 @@ unless its actual features call for them.
   repeatable Figma-to-code implementation. Always retrieve the real Figma icons
   wherever available; screenshot fallback rules do not change this mode.
 - **Screenshot reconstruction:** recreate the visible UI from a supplied print
-  or screenshot without requiring a Figma file. The maintainer reports roughly
-  90% visual resemblance, approaching 99% in some cases, with **OpenAI Astra
-  at Medium reasoning effort or higher**. These are informal observations,
-  not an independently validated benchmark, measured average, automatic score,
-  or guarantee for other models or settings. Source quality, fonts, and assets
-  affect results; verify each implementation separately. Read
+  or screenshot without requiring a Figma file. Read
   [references/screenshot-reconstruction.md](references/screenshot-reconstruction.md)
   before implementing this mode. Use genuine Keyline Icons for UI glyphs whose
   exact source cannot be recovered, and record the substitution.
+
+With **OpenAI Astra at Medium reasoning effort or higher**, the maintainer
+reports these typical visual fidelity ranges:
+
+- **Screenshot alone:** 75%-90%.
+- **Figma link, with or without an accompanying screenshot:** 90%-99%.
+
+These are informal visual assessments, not an independently validated
+benchmark, measured average, automatic score, or guarantee. Source access,
+quality, fonts, and assets affect results; verify each implementation
+separately and do not assume the same ranges for other models or settings.
+The Figma range assumes the linked design can actually be accessed and
+extracted; an inaccessible link does not supply usable design context.
 
 A screenshot exported from an available Figma source for comparison remains
 part of Figma handoff. Do not silently switch an unavailable Figma source to
