@@ -25,6 +25,16 @@ These typical ranges are the maintainer's informal visual assessments using **Op
 - A small, truthful development progress indicator that disappears immediately when work finishes and is excluded from production and fidelity captures.
 - Separate visual, functional, and production checks, followed by a concise handoff. Publication happens only when requested.
 
+## Figma-to-code examples
+
+**Trading dashboard**
+
+![Kodety AIDoff showing a trading dashboard implemented from Figma in a local browser preview](assets/examples/trading-dashboard.png)
+
+**Workspace overview**
+
+![Kodety AIDoff showing a workspace overview implemented from Figma in a local browser preview](assets/examples/workspace-overview.png)
+
 ## Install in Codex
 
 Choose one scope. These commands use the local skill locations documented by OpenAI. [Official Codex skill documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)
