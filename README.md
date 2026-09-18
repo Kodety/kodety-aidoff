@@ -43,14 +43,14 @@ Choose one scope. These commands use the local skill locations documented by Ope
 
 ```sh
 mkdir -p "$HOME/.agents/skills"
-git clone https://github.com/matusaelhorch/kodety-aidoff.git "$HOME/.agents/skills/kodety-aidoff"
+git clone https://github.com/Kodety/kodety-aidoff.git "$HOME/.agents/skills/kodety-aidoff"
 ```
 
 **Project — run from your project's root instead:**
 
 ```sh
 mkdir -p .agents/skills
-git clone https://github.com/matusaelhorch/kodety-aidoff.git .agents/skills/kodety-aidoff
+git clone https://github.com/Kodety/kodety-aidoff.git .agents/skills/kodety-aidoff
 ```
 
 In Codex CLI or the IDE extension, mention the skill with `$kodety-aidoff` or select it through `/skills`. If it does not appear, restart Codex. [Invocation and discovery](https://learn.chatgpt.com/docs/build-skills#how-codex-uses-skills)
@@ -67,14 +67,14 @@ Choose one scope using Claude Code's documented skill directories. [Official Cla
 
 ```sh
 mkdir -p "$HOME/.claude/skills"
-git clone https://github.com/matusaelhorch/kodety-aidoff.git "$HOME/.claude/skills/kodety-aidoff"
+git clone https://github.com/Kodety/kodety-aidoff.git "$HOME/.claude/skills/kodety-aidoff"
 ```
 
 **Project — run from your project's root instead:**
 
 ```sh
 mkdir -p .claude/skills
-git clone https://github.com/matusaelhorch/kodety-aidoff.git .claude/skills/kodety-aidoff
+git clone https://github.com/Kodety/kodety-aidoff.git .claude/skills/kodety-aidoff
 ```
 
 Invoke the skill with `/kodety-aidoff`. Restart Claude Code if you created a top-level skills directory after the session began. [Invocation and live detection](https://code.claude.com/docs/en/skills)
@@ -87,7 +87,7 @@ The shell commands above work in macOS/Linux shells and Git Bash. `git clone` re
 
 ### Claude web and Desktop
 
-1. Download [kodety-aidoff.zip](https://github.com/matusaelhorch/kodety-aidoff/releases/latest/download/kodety-aidoff.zip) from the latest release.
+1. Download [kodety-aidoff.zip](https://github.com/Kodety/kodety-aidoff/releases/latest/download/kodety-aidoff.zip) from the latest release.
 2. Keep the ZIP intact. It contains `kodety-aidoff/SKILL.md` and its supporting files inside the required top-level folder. [Packaging requirements](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 3. Enable **Code execution and file creation**. Open **Customize → Skills → + → Create skill → Upload a skill**, upload your ZIP, and enable the skill. Organization policies may control availability. [Official upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 
@@ -140,7 +140,7 @@ specified in the legal terms. Attribution must not imply endorsement.
 
 Example attribution for an adaptation:
 
-> Based on [Kodety AIDoff](https://github.com/matusaelhorch/kodety-aidoff)
+> Based on [Kodety AIDoff](https://github.com/Kodety/kodety-aidoff)
 > by Kodety / matusaelhorch, licensed under
 > [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 > Changes: describe your modifications here.
