@@ -13,11 +13,12 @@ Kodety AIDoff is an agent skill for building landing pages, company and marketin
 | **Figma handoff** | Read node-specific design context, preserve authored structure and measurements, and retrieve the original exported icons and assets. Verify the running implementation separately. |
 | **Screenshot reconstruction** | Rebuild the visible interface without requiring Figma access. Record inferred typography, spacing, behavior, and responsive rules. Prefer exact assets; use genuine Keyline Icons only for unrecoverable UI glyphs. |
 
-Screenshot reconstruction aims for roughly **90% visual resemblance**, pursuing **near-99%** when source quality, fonts, and assets permit. These are quality goals, not measured averages, guarantees, or pixel-comparison scores. Substitutions remain documented; logos require authentic assets.
+The maintainer reports roughly **90% visual resemblance**, approaching **99% in some screenshot reconstructions**, using **OpenAI Astra with Medium reasoning effort or higher**. These are informal observations, not an independently validated benchmark, measured average, guarantee, or pixel-comparison score. Results depend on the source, fonts, assets, model, and settings; the range should not be assumed for other models or hosts. Substitutions remain documented; logos require authentic assets.
 
 ## What the workflow emphasizes
 
 - Focused components and cohesive modules, readable code, and minimal nonessential comments.
+- Custom design-system controls, including select triggers, dropdown panels, and options. Focus outlines are reserved for actual text-entry fields; other controls retain visible keyboard focus through design-system styling without outlines or rings.
 - Performance decisions based on real workloads, including justified memoization, bounded data rendering, and resource cleanup.
 - Working navigation and controls, with honest boundaries for missing integrations. Static websites do not need invented authentication or backends.
 - An automatically opened development preview as soon as the first meaningful screen renders, when the host provides browser/preview access.

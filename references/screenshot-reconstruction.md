@@ -8,9 +8,11 @@ accessibility, performance, integration, and validation rules from `SKILL.md`.
 
 ## Fidelity goal
 
-Aim for roughly 90% visual resemblance and pursue near-99% where a clear
-reference, available fonts, and recoverable assets permit it. These figures
-express the desired quality level; they are not a measured average or promise.
+The maintainer reports roughly 90% visual resemblance, approaching 99% in some
+cases, using **OpenAI Astra at Medium reasoning effort or higher**. Treat these
+as informal observations, not an independently validated benchmark, measured
+average, or promise for other models or settings. Aim for high fidelity and
+assess each result against its own source, available fonts, and assets.
 Report a numeric result only when an explicit assessment method and evidence
 support it. Do not equate perceived similarity with `1 - mismatchRatio`, weaken
 the comparator's limits to accept 10% mismatch, or label a substitution exact.

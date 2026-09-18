@@ -107,8 +107,8 @@ Map design concepts to code deliberately:
 
 - repeated semantic UI becomes one component;
 - size, tone, intent, density, and meaningful variants become typed props;
-- hover, focus, active, visited, and native disabled visuals normally remain
-  pseudo-states;
+- hover, focus-visible, active, visited, and disabled visuals normally use
+  pseudo-states with design-system styling;
 - loading, error, expanded, selected, checked, and permission state normally
   come from runtime state;
 - text and media become content/props/slots rather than copied components;
@@ -163,6 +163,39 @@ Every visible control must have real semantics and behavior:
 Prototype links describe interaction intent, not authorization or business
 truth. Motion has one authorial implementation. When Figma includes authored
 motion, use the Figma motion workflow before translating it.
+
+### Custom controls and focus
+
+In both Figma handoff and screenshot reconstruction, make the visible controls
+custom to the source design and its design system. Reuse and style accessible
+project or headless primitives instead of rebuilding their interaction logic.
+Keep native semantics where applicable; custom appearance does not mean
+replacing buttons or inputs with nonsemantic elements.
+
+- Selects and dropdowns must have custom-styled triggers, panels, option lists,
+  and relevant states. Do not ship browser-default select popups or
+  merely restyle the closed trigger while leaving the open menu native.
+- Style toggles, checkboxes, radios, menus, and other controls consistently
+  with the design system, including hover, active, selected, disabled, error,
+  and keyboard-focus states. Preserve labels, form values, validation, and
+  assistive-technology semantics.
+- Never add focus outlines or outline-like rings to non-text-entry controls,
+  including selects, toggles, buttons, checkboxes, radios, menu items, and
+  options. This includes ring utilities and box shadows used to imitate an
+  outline. Ordinary component borders and non-focus shadows are unaffected.
+- Only fields where users actually type text, such as text inputs, textareas,
+  and editable text regions, may use a focus outline. In an editable combobox,
+  that exception applies only to its text-entry field, not its trigger or
+  options. An input element used as a checkbox or toggle is not text entry.
+- Give non-text controls a clearly visible `:focus-visible` treatment through
+  design-system surface, border-color, or text changes. Distinguish focus from
+  selection and hover, keep it legible in forced-colors/high-contrast modes,
+  and preserve user accessibility overrides. Scope default-outline removal to
+  controls that already have a visible replacement; never use a blanket reset
+  that leaves keyboard users without feedback.
+- Verify opening, closing, keyboard navigation, selection, Escape, focus
+  return, and relevant typeahead behavior for custom dropdowns. Reuse the
+  primitive's supported interaction pattern and verify touch behavior too.
 
 ### Live development preview
 
@@ -236,8 +269,8 @@ hidden in one frame.
 - Preserve semantic landmarks and a logical heading hierarchy.
 - Provide names, labels, alt text, visible focus, sufficient contrast, and
   keyboard access.
-- Prefer native controls and accessible project primitives over visual-only
-  custom widgets.
+- Use native semantics and accessible project/headless primitives underneath
+  custom design-system visuals. Follow the control and focus rules in section 6.
 - Reserve dimensions for media and avoid unexpected layout shift.
 - Load the critical visual assets and fonts intentionally; lazy-load work below
   the initial view and split route or feature code when it reduces startup work.
@@ -279,6 +312,8 @@ Do not deliver:
 - fabricated exact-source claims or undocumented icon, font, or media
   substitutions;
 - controls that are decorative or log to the console instead of working;
+- browser-default dropdowns, focus outlines/rings on non-text-entry controls,
+  or removed focus feedback without a visible keyboard-focus replacement;
 - generated build files as the only modified source;
 - a mock represented as a connected production service;
 - duplicated motion logic;
@@ -298,7 +333,8 @@ The application portion is complete only when:
 - direct navigation/deep links work in the production-like server;
 - real and mock data boundaries are identified accurately;
 - relevant loading, empty, error, disabled, and success states are exercisable;
-- keyboard, focus, and semantics were checked;
+- keyboard, visible focus without non-text-entry outlines/rings, custom
+  dropdown behavior, and semantics were checked;
 - component/module boundaries and readability were reviewed, and performance
   decisions were verified against representative workloads;
 - no critical console error, failed local asset request, or unhandled rejection

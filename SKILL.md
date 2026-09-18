@@ -1,6 +1,6 @@
 ---
 name: kodety-aidoff
-description: AI Figma-to-code handoff and screenshot reconstruction for websites, landing pages, portfolios, apps, and dashboards. Screenshot fidelity targets ~90%, approaching 99% when feasible.
+description: "AI Figma-to-code handoff and screenshot reconstruction for websites and apps. Maintainer-reported screenshot fidelity: ~90-99% with OpenAI Astra at Medium or higher; results vary."
 license: CC-BY-SA-4.0
 ---
 
@@ -24,10 +24,12 @@ unless its actual features call for them.
   repeatable Figma-to-code implementation. Always retrieve the real Figma icons
   wherever available; screenshot fallback rules do not change this mode.
 - **Screenshot reconstruction:** recreate the visible UI from a supplied print
-  or screenshot without requiring a Figma file. Aim for roughly 90% visual
-  resemblance and pursue near-99% where source quality, fonts, and assets
-  permit. These are quality goals, not a measured average, automatic score, or
-  promise of 100% fidelity. Read
+  or screenshot without requiring a Figma file. The maintainer reports roughly
+  90% visual resemblance, approaching 99% in some cases, with **OpenAI Astra
+  at Medium reasoning effort or higher**. These are informal observations,
+  not an independently validated benchmark, measured average, automatic score,
+  or guarantee for other models or settings. Source quality, fonts, and assets
+  affect results; verify each implementation separately. Read
   [references/screenshot-reconstruction.md](references/screenshot-reconstruction.md)
   before implementing this mode. Use genuine Keyline Icons for UI glyphs whose
   exact source cannot be recovered, and record the substitution.
@@ -152,6 +154,16 @@ conflict with a local visual hack.
 - Use semantic, accessible controls. A visual button is a real button or link;
   a modal manages focus; tables, forms, labels, and headings keep their native
   meaning.
+- Make control visuals custom to the design system in both input modes. Select
+  triggers, dropdown panels, and options must all be custom styled; do not
+  leave the open dropdown to browser-default rendering. Reuse accessible
+  project or headless primitives for behavior and semantics.
+- Do not add focus outlines or outline-like rings to selects, toggles, buttons,
+  checkboxes, radios, or other non-text-entry controls. Only actual text-entry
+  fields may use a focus outline. Preserve visible keyboard focus with a
+  distinct design-system surface, border-color, or text treatment; never remove
+  focus feedback globally. Follow the detailed control rules in the
+  [application contract](references/application-contract.md#custom-controls-and-focus).
 - Use Grid, Flexbox, normal flow, container constraints, and deliberate local
   overlays. Do not absolute-position the whole screen to imitate one snapshot.
 - Never use the reference screenshot as the page background, a monolithic image,
